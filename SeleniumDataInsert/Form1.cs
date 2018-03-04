@@ -10,6 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+ 
+using System.Data.SqlClient;
+using SeleniumDataInsert.Models.AuthorProp.Properties;
+using SeleniumDataInsert.Models.AuthorProp.DataLayer;
+
 
 namespace SeleniumDataInsert
 {
@@ -18,6 +23,16 @@ namespace SeleniumDataInsert
         public Form1()
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.Manual;
+            foreach (var scrn in Screen.AllScreens)
+            {
+                if (scrn.Bounds.Contains(this.Location))
+                {
+                    this.Location = new Point(scrn.Bounds.Right - this.Width, scrn.Bounds.Top);
+                    return;
+                }
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -67,10 +82,11 @@ namespace SeleniumDataInsert
             driver.Close();
         }
 
-
+        List<Author> authors;
         private void Automate()
         {
-
+            IWebDriver driver = new ChromeDriver();
+            authors = new List<Author>();
             DataGridView dataUrls = new DataGridView();
 
             int k = 0;
@@ -113,7 +129,7 @@ namespace SeleniumDataInsert
 
             try
             {
-                IWebDriver driver = new ChromeDriver();
+              
 
                 foreach (DataGridViewRow row in  dataUrls.Rows)
                 {
@@ -146,6 +162,15 @@ namespace SeleniumDataInsert
                             //driver.Dispose();
                             // PopulateRows(AuthorName, Univerisity, Hindex, DocumentName);
                             dt.Rows.Add(AuthorName, Univerisity, Hindex, DocumentName,"NIl");
+                            Author author = new Author
+                            {
+                                AuthorName=AuthorName,
+                                DocumentName=DocumentName,
+                                Hindex=Hindex,
+                                University=Univerisity
+                            };
+
+                            authors.Add(author);
                         }
 
 
@@ -165,10 +190,10 @@ namespace SeleniumDataInsert
                 HasErrors = true;
                 Task.Run(() =>
                 {
-                    var dialogResult = MessageBox.Show(ex.Message.ToString(), "Warning", MessageBoxButtons.OKCancel);
+                    //var dialogResult = MessageBox.Show(ex.Message.ToString(), "Warning", MessageBoxButtons.OKCancel);
                     if (HasErrors)
                     {
-                        MessageBox.Show("Some error occured Unable to complete the process" + Environment.NewLine + "Collected datas saved that was collected before the error occured", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //MessageBox.Show("Some error occured Unable to complete the process" + Environment.NewLine + "Collected datas saved that was collected before the error occured", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
 
@@ -183,7 +208,8 @@ namespace SeleniumDataInsert
                 //ToCSV(dt, strFilePath);
                 if (!HasErrors)
                     MessageBox.Show("Data successfully collected");
-
+                driver.Close();
+                driver.Dispose();
 
                     
             }
@@ -227,6 +253,48 @@ namespace SeleniumDataInsert
                 sw.Write(sw.NewLine);
             }
             sw.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int CountResponse = 0; 
+            AuthorDataLayer objDataLayer = new AuthorDataLayer();
+            if (authors.Count>0)
+            {
+                foreach (var author in authors)
+                {
+                    if (author!=null)
+                    {
+                     int Result =objDataLayer.SaveAuthors(author);
+                        if(Result==1)
+                        {
+                            CountResponse ++;
+                        }
+                    }
+                  
+                }
+            }
+
+            if(CountResponse==authors.Count)
+            {
+                MessageBox.Show("Data saved to database");
+            }
+            else
+            {
+                MessageBox.Show("Some error occured,This may occured due to the duplicate entires,Data saved partially.Please check your database for ensure data saved as expected");
+            }
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
         }
 
     }

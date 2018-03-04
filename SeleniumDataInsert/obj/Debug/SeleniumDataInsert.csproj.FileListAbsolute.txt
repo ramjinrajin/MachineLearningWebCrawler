@@ -12,3 +12,15 @@ c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\Sele
 C:\Users\LENOVO-PC\Desktop\AMC\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\SeleniumDataInsert.exe.config
 C:\Users\LENOVO-PC\Desktop\AMC\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.exe
 C:\Users\LENOVO-PC\Desktop\AMC\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.pdb
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\SeleniumDataInsert.exe.config
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.exe
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.pdb
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\SeleniumDataInsert.exe
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\SeleniumDataInsert.pdb
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\WebDriver.xml
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.csprojResolveAssemblyReference.cache
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.Form1.resources
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.Properties.Resources.resources
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.csproj.GenerateResource.Cache
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\bin\Debug\WebCrawlDatas.mdf
+F:\Projects\Inzenjer\Kerala Univerity\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\bin\Debug\WebCrawlDatas_log.ldf
