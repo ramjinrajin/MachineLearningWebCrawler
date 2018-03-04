@@ -1,0 +1,14 @@
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\bin\Debug\SeleniumDataInsert.exe.config
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.csprojResolveAssemblyReference.cache
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.Form1.resources
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.Properties.Resources.resources
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.csproj.GenerateResource.Cache
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\bin\Debug\SeleniumDataInsert.exe
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\bin\Debug\SeleniumDataInsert.pdb
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\bin\Debug\WebDriver.dll
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\bin\Debug\WebDriver.xml
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.exe
+c:\users\lenovo-pc\documents\visual studio 2013\Projects\SeleniumDataInsert\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.pdb
+C:\Users\LENOVO-PC\Desktop\AMC\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\SeleniumDataInsert.exe.config
+C:\Users\LENOVO-PC\Desktop\AMC\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.exe
+C:\Users\LENOVO-PC\Desktop\AMC\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.pdb
