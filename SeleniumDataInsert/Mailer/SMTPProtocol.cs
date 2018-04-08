@@ -15,7 +15,7 @@ namespace SeleniumDataInsert.Mailer
 
             using (MailMessage mail = new MailMessage())
             {
-                mail.From = new MailAddress("webCrawlerService@hotmail.com");
+                mail.From = new MailAddress("ramjinboss77@gmail.com");
                 mail.To.Add(emailTo);
                 mail.Subject = subject;
                 mail.Body = body;
@@ -25,9 +25,9 @@ namespace SeleniumDataInsert.Mailer
                 //mail.Attachments.Add(new Attachment("C:\\SomeFile.txt"));
                 //mail.Attachments.Add(new Attachment("C:\\SomeZip.zip"));
 
-                using (SmtpClient smtp = new SmtpClient("smtp.live.com", 587))
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new NetworkCredential("webCrawlerService@hotmail.com", "@dminAdmin@1");
+                    smtp.Credentials = new NetworkCredential("ramjinboss77@gmail.com", "9790030814");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                 }

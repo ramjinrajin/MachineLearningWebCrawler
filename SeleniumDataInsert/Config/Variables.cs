@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeleniumDataInsert.Models.AuthorProp.Properties;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,13 +11,14 @@ namespace SeleniumDataInsert.Config
     public static class  EmailConfig
     {
         public static string ToEmail = "ramjinrajin@gmail.com";
-        public static string MessageContent = "This mail is auto generated based on the data collected from the selenium";
+        public static string MessageContent = "Web crawler report generated based on the automation tool";
     }
 
     public static class Variables
     {
         public static DataTable CSVDataSource;
-        
+
+        public static List<Author> AuthorDataSource;
 
         public static string BaseUrl
         {
@@ -30,8 +32,9 @@ namespace SeleniumDataInsert.Config
         {
             List<long> loopurlIds = new List<long> 
             {
-                56596324000
-                
+                56596325000,56596326000
+               
+                 
             };
 
             return loopurlIds;

@@ -26,5 +26,12 @@ namespace SeleniumDataInsert.Selenium
                 frm.Show();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserReg objReg = new UserReg();
+            objReg.Show();
+        }
     }
 }

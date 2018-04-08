@@ -85,3 +85,4 @@ C:\Users\RamjinM\Desktop\UCk\Neetha\MachineLearningWebCrawler\SeleniumDataInsert
 C:\Users\RamjinM\Desktop\UCk\Neetha\MachineLearningWebCrawler\SeleniumDataInsert\bin\Debug\bin\Debug\MasterDb_log.ldf
 C:\Users\RamjinM\Desktop\UCk\Neetha\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.Selenium.UserLogin.resources
 C:\Users\RamjinM\Desktop\UCk\Neetha\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.Selenium.UserReg.resources
+C:\Users\RamjinM\Desktop\UCk\Neetha\MachineLearningWebCrawler\SeleniumDataInsert\obj\Debug\SeleniumDataInsert.AnalyticsModule.AnalyticsPresenter.resources

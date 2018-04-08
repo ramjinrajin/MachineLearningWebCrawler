@@ -19,6 +19,7 @@ using System.Configuration;
 using SeleniumDataInsert.Mailer;
 using SeleniumDataInsert.Config;
 using SeleniumDataInsert.Selenium;
+using SeleniumDataInsert.AnalyticsModule;
  
 
 
@@ -61,7 +62,16 @@ namespace SeleniumDataInsert
             SourceDataFromWebCrawler = objCrawlerModule.GetFetchedDataFromWebCrawler();
             dataGridView1.DataSource = SourceDataFromWebCrawler;
             if (SourceDataFromWebCrawler!=null)
-            SMTPProtocol.NotifyPartners(DateTime.Now.ToString() + " WebCrawler Report", ConvertDataTableToHTML(SourceDataFromWebCrawler, EmailConfig.MessageContent), EmailConfig.ToEmail);
+                try
+                {
+                    SMTPProtocol.NotifyPartners(new Guid().ToString() + " Crawler report auto generated", ConvertDataTableToHTML(SourceDataFromWebCrawler, EmailConfig.MessageContent), EmailConfig.ToEmail);
+                }
+                catch (Exception)
+                {
+                    
+               
+                }
+           
         }
 
         private static void AuthorFetchingModel(long AuthorId)
@@ -162,16 +172,9 @@ namespace SeleniumDataInsert
 
         private void button2_Click(object sender, EventArgs e)
         {
-            authors = new List<Author>
-            {
-                new Author
-                {
-                    AuthorName="sdsd0",
-                    University="asd",
-                    DocumentName="sds00",
-                    Hindex="sds"
-                }
-            };
+            authors = new List<Author>();
+            authors = Variables.AuthorDataSource;
+          
             int CountResponse = 0; 
             AuthorDataLayer objDataLayer = new AuthorDataLayer();
             if (authors.Count>0)
@@ -262,6 +265,13 @@ namespace SeleniumDataInsert
             this.Hide();
             UserLogin userLog = new UserLogin();
             userLog.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AnalyticsPresenter objAnalyticsPresenter = new AnalyticsPresenter();
+            objAnalyticsPresenter.Show();
         } 
 
     }

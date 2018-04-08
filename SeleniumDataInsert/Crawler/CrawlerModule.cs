@@ -59,6 +59,7 @@ namespace SeleniumDataInsert.Crawler
             {
                 LoopModule loopModule = new LoopModule();
                 authors= loopModule.LoopWebSiteWithXpath(driver, dataUrls, dt);
+                Variables.AuthorDataSource = authors;
                 driver.Close();
                 driver.Dispose();
 

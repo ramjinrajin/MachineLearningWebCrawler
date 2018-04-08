@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumDataInsert.Config;
+using SeleniumDataInsert.Models.AuthorProp.DataLayer;
 using SeleniumDataInsert.Models.AuthorProp.Properties;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,8 @@ namespace SeleniumDataInsert.Loop
                             University = Univerisity
                         };
 
+                        AuthorDataLayer onbjAuthorDataLayer = new AuthorDataLayer();
+                        onbjAuthorDataLayer.SaveAuthors(author);
                         outPutAuthors.Add(author);
                     }
 

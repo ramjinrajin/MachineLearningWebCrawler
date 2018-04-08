@@ -66,9 +66,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalyticsModule\AnalyticsPresenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalyticsModule\AnalyticsPresenter.Designer.cs">
+      <DependentUpon>AnalyticsPresenter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Config\Variables.cs" />
     <Compile Include="Crawler\CrawlerModule.cs" />
     <Compile Include="Mailer\SMTPProtocol.cs" />
+    <Compile Include="PortalUpdateManager\DataLayer\AnalayticsDataLayer.cs" />
     <Compile Include="Selenium\Automator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +99,9 @@
     <Compile Include="Selenium\UserReg.Designer.cs">
       <DependentUpon>UserReg.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AnalyticsModule\AnalyticsPresenter.resx">
+      <DependentUpon>AnalyticsPresenter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Selenium\Automator.resx">
       <DependentUpon>Automator.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,7 +178,6 @@
     <Content Include="bin\Debug\WebDriver.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AnalyticsModule\" />
     <Folder Include="App_Data\" />
     <Folder Include="bin\Debug\App_Data\" />
     <Folder Include="BusinessLogics\" />

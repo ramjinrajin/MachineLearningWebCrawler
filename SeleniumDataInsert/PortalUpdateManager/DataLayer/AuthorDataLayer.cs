@@ -26,6 +26,7 @@ namespace SeleniumDataInsert.Models.AuthorProp.DataLayer
                     cmd.Parameters.AddWithValue("@University", objAuthor.University);
                     cmd.Parameters.AddWithValue("@Hindex", objAuthor.Hindex);
                     cmd.Parameters.AddWithValue("@DocumentName", objAuthor.DocumentName);
+                    cmd.Parameters.AddWithValue("@UniqueCode", UniqueCodeGenerator());
                     return (int)cmd.ExecuteScalar();
 
 
@@ -44,6 +45,11 @@ namespace SeleniumDataInsert.Models.AuthorProp.DataLayer
 
 
          
+        }
+
+        private string UniqueCodeGenerator()
+        {
+            return Guid.NewGuid().ToString();
         }
     }
 }
