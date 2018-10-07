@@ -1,6 +1,11 @@
 # MachineLearningWebCrawler
 Fetch data from third party site and fill our domain
-
+      <customHeaders>
+        <add name="Access-Control-Allow-Origin" value="*" />
+        <add name="Access-Control-Allow-Headers" value="Content-Type, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Date, X-Api-Version, X-File-Name" />
+        <add name="Access-Control-Allow-Credentials" value="true" />
+        <add name="Access-Control-Allow-Methods" value="POST,GET,PUT,PATCH,DELETE,OPTIONS" />
+      </customHeaders>
 
 Video Doc
 
